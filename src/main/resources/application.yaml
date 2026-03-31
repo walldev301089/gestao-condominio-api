@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/condominio_db
+    username: wallace
+    password: "123"            # <--- Coloque a mesma senha aqui
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    # ... resto das suas configurações

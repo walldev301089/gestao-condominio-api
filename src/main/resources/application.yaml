@@ -2,8 +2,16 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/condominio_db
     username: wallace
-    password: "123"            # <--- Coloque a mesma senha aqui
+    password: "123"
     driver-class-name: org.postgresql.Driver
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    # ... resto das suas configurações
+    open-in-view: false
+    # Esta linha abaixo é o que vai criar a tabela para você
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        # Garante que o Hibernate não invente nomes estranhos para as tabelas
+        dialect: org.hibernate.dialect.PostgreSQLDialect

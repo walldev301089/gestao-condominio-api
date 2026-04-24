@@ -14,6 +14,7 @@ import java.util.List;
 @Getter
 @Entity
 @Builder
+@Table(name = "apartamento")
 public class Apartamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
